@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
+#terminal-container {
+    width: 80%;
+    height: 86%;
+    position: sticky;
+    background: linear-gradient(160deg, rgb(19, 14, 61) 0%, rgb(44, 30, 129) 100%);
+    overflow: hidden;
+    border-radius: 8px;
+    opacity: 0.7;
+}
+
+#terminal-without-header {
+    padding: 12px 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#terminal-header {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background: rgb(52,52,52);
+    background: linear-gradient(315deg, rgba(52,52,52,1) 0%, rgba(66,66,66,1) 100%);
+}
+
+.terminal-header-round {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 8px;
+}
+
+#terminal-title {
+    color: white;
+    margin: 0 auto;
+    font-family: 'Oldenburg', cursive;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.terminal-buttons-container {
+    position: absolute;
+    right: 0;
+    top: 9px;
+}
+
+#author-container {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    color: rgb(61, 231, 61);
+}
+
+.red-button {
+    background-color: rgb(255, 57, 57);
+}
+.red-button:hover {
+    background-color: rgb(207, 43, 43);
+}
+.green-button {
+    background-color: rgb(46, 245, 46);
+}
+.green-button:hover {
+    background-color: rgb(35, 196, 35);
+}
+.yellow-button {
+    background-color: rgb(216, 216, 59);
+}
+.yellow-button:hover {
+    background-color: rgb(182, 182, 37);
+}
+
+#terminal-help-button {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../assets/images/icons/information.png);
+}
+
+.terminal-help-paragraph {
+    display: flex;
+    align-self: center;
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+#auto-animated-button {
+    top: 40px;
+    right: 10px;
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    background-color: rgba(52,52,52,1);
+    z-index: 1;
+}
+
+#auto-annimation-state-image {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    margin-left: 4px;
+}
+
+.terminal-top-sentence {
+    font-size: 14px;
+    color: rgb(39, 219, 84);
+    opacity: 0.5;
+    margin: 0 auto;
+}
+
+#terminal-help-button-container {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-character {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 3px 0;
+}
+
+#terminal-help-hint {
+    opacity: 0.9;
+    display: flex;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+#header-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
+
+#header-titles div{
+    text-align: center;
+}
+
+#terminal-content {
+    margin: 2px 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+#cursor {
+    margin-bottom: -1px;
+    height: 13px;
+    width: 10px;
+    background-color: white;
+    display: inline-block;
+}
+
+.terminal-result {
+    display: block;
+    width: 100%;
+    margin: 3px 0;
+}
+
+#scrollable-terminal-section {
+    overflow: hidden;
+}
+
+.command-name {
+    color: rgb(255, 255, 142);
+}
+
+.not-found-command {
+    color: rgb(255, 78, 78);
+}
+
+#terminal-input-helper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: default;
+}
+
+.command-result-container {
+    margin: 8px 0 8px 26px;
+}
+
+#scroll {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 4px;
+    width: 16px;
+    background: rgba(55, 45, 121, 0.8);
+
+    box-sizing: border-box;
+}
+
+#scroll-top, #scroll-bottom {
+    height: 20px;
+    width: 16px;
+    position: absolute;
+    right: 0;
+    background-color: rgb(22, 15, 68);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+}
+
+#scroll-top {
+    top: 0;
+    border-radius: 3px 3px 0 0;
+    background-image: url(../assets/images/icons/top-arrow.png);
+}
+
+#scroll-bottom {
+    bottom: 0;
+    border-radius: 0 0 3px 3px;
+    background-image: url(../assets/images/icons/down-arrow.png);
+}
+
+#content-wrapper {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 20px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#scroll-bar {
+    width: 16px;
+    height: 80%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    border-top: 1px solid rgb(55, 45, 121, 0.8);
+    border-bottom: 1px solid rgb(55, 45, 121, 0.8);
+    background-color: rgb(15, 11, 41);
+}
+
+#scroll-bar:hover {
+    background-color: rgb(26, 19, 75);
+}
+
+#scroll-top:hover, #scroll-bottom:hover {
+    background-color: rgb(31, 25, 78);
+}
+
+#terminal-caller {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40px;
+    right: 0px;
+
+    width: 54px;
+    height: 44px;
+
+    opacity: 0.4;
+
+    border-radius: 8px 8px 0 6px;
+    background-color: rgb(102, 102, 102);
+}
+
+#terminal-caller-header {
+    border-radius: 6px 0 0 0;
+    height: 16px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+}
+
+.tch-button {
+    margin: 0 2px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+}
+
+.tch-terminal {
+    margin-top: -4px;
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+
+    #global-section {
+        justify-content: start;
+    }
+
+    #terminal-title {
+        color: white;
+        margin: 0 auto;
+        font-family: 'Oldenburg', cursive;
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    #terminal-container {
+        width: 90%;
+        height: 65%;
+    }
+
+    #terminal-help-button {
+        max-width: 20px;
+        min-width: 20px;
+    }
+
+    #terminal-help-button-container {
+        width: 60%;
+    }
+
+    #auto-animated-button {
+        top: 34px;
+        right: 4px;
+        padding: 4px;
+    }
+
+    #author-container {
+        margin-top: 16px;
+        font-size: 10px;
+    }
+
+    .terminal-top-sentence {
+        font-size: 12px;
+    }
+
+    .terminal-character {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px) {
+
+    #scroll {
+        right: -4px;
+    }
+
+    #global-section {
+        justify-content: start;
+    }
+
+    #terminal-title {
+        font-size: 11px;
+    }
+
+    .terminal-header-round {
+        margin: 0 4px;
+    }
+
+    #terminal-container {
+        width: 90%;
+        height: 65%;
+    }
+
+    #terminal-help-button {
+        max-width: 15px;
+        min-width: 15px;
+
+        background-size: 15px;
+    }
+
+    #terminal-help-button-container {
+        width: 65%;
+    }
+
+    #auto-animated-button {
+        top: 34px;
+        right: 4px;
+        padding: 2px 4px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    #terminal-without-header {
+        padding: 12px;
+    }
+
+    #author-container {
+        margin-top: 22px;
+        font-size: 10px;
+    }
+
+    #terminal-author {
+        font-size: 7px;
+    }
+
+    #header-titles {
+        padding: 0 16px;
+    }
+
+    #terminal-help-hint {
+        font-size: 9px;
+    }
+
+    .terminal-top-sentence {
+        font-size: 10px;
+    }
+
+    .terminal-character {
+        font-size: 11px;
+    }
+}

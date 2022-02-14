@@ -1,0 +1,11 @@
+User-agent: Googlebot-Image
+Disallow: /assets/images/icons/
+Disallow: /assets/images/icons/logo-anim-assets/
+Disallow: /assets/images/logos/
+Disallow: /assets/images/technologies/
+
+User-agent: Googlebot
+Disallow: /assets/images/icons/
+Disallow: /assets/images/icons/logo-anim-assets/
+Disallow: /assets/images/logos/
+Disallow: /assets/images/technologies/

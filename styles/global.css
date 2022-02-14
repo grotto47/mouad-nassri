@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,400&display=swap');
+
+body, html {
+    height: 100%;
+}
+
+a, input, textarea {
+    outline: none;
+}
+
+.green-message {
+    color: rgb(42, 245, 42);
+    
+    padding-left: 30px;
+    background-image: url(../assets/images/icons/colored-contact.png);
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: left center;
+}
+
+#global-section {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    padding-left: 60px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu-button-style-1 {
+    display: flex;
+
+    background-color: white;
+    text-decoration: none;
+
+    color: rgb(71, 218, 71);
+}
+
+.white {
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold500 {
+    font-weight: 500;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hv-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.margin-bottom6 {
+    margin: 0 0 6px 0;
+}
+
+.move-to-right {
+    margin-left: auto;
+}
+
+.unselectable {
+    -moz-user-select: none; 
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+    cursor: default;
+}
+
+.help-image {
+    display: flex;
+    height: 40px;
+    width: 40px;
+}
+
+.label-1 {
+    font-size: 12px;
+}
+
+#page-title {
+    font-family: 'Hammersmith One', sans-serif;
+    margin: 0;
+    font-size: 45px;
+    color: rgb(76, 255, 92);
+}
+
+#big-title {
+    font-family: 'Hammersmith One', sans-serif;
+    margin: 0;
+    font-size: 26px;
+}
+
+#page-quote {
+    font-family: 'Nunito', sans-serif;
+    margin: -12px 0 24px 0;
+    font-size: 16px;
+    width: 100%;
+}
+
+.description {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+    letter-spacing: 1.05px;
+    font-weight: 400;
+}
+
+.link {
+    color: rgb(76, 255, 92);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+#black-back {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.no-display {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    max-height: 0;
+    max-width: 0;
+}
+
+.special-word {
+    color: rgb(76, 255, 92);
+}
+
+.button-style-1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: white;
+    background-color: rgb(71, 71, 71);
+    border-radius: 4px;
+
+    display: flex;
+    margin-left: auto;
+    transition: all 0.4s ease;
+}
+
+.button-style-1:hover {
+    background-color: rgb(57, 201, 57);
+}

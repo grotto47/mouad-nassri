@@ -1,0 +1,1 @@
+let root = "localhost/portfolio/";

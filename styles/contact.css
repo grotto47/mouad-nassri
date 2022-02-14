@@ -1,0 +1,178 @@
+#first-section {
+    width: 40%;
+    height: 100%;
+
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+#map-wrapper {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#mymap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#global-section {
+    margin: 0;
+    padding-left: 60px;
+    width: 100%;
+}
+
+#contact-global-section {
+    display: flex;
+    height: 100%;
+}
+
+#page-quote {
+    font-size: 14px;
+    width: 100%;
+}
+
+.input-style {
+    border: none;
+    padding: 16px 15px;
+
+    background-color: rgb(71, 71, 71);
+    color: rgb(230, 230, 230);
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textarea-style {
+    border: none;
+    padding: 16px;
+
+    background-color: rgb(71, 71, 71);
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 150px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+
+    margin-bottom: 6px;
+}
+
+.input-strip {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: rgb(71, 218, 71);
+    z-index: 2;
+}
+
+.label-style {
+    color: rgb(207, 207, 207);
+    display: flex;
+    margin: 4px 0;
+}
+
+#terminal-wrapper {
+    width: 100%;
+    left: 0;
+    z-index: 8888;
+}
+
+#terminal-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#terminal-caller {
+    z-index: 8888;
+}
+
+#black-back {
+    z-index: 8888;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    #global-section {
+        padding: 14px;
+        justify-content: center;
+        height: 100%;
+    }
+
+    #contact-global-section {
+        align-items: center;
+    }
+
+    header {
+        margin-left: -60px;
+    }
+
+    #expand-logo {
+        display: none;
+    }
+
+    #first-section {
+        padding: 0;
+        margin-right: 10px;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #terminal-caller {
+        opacity: 0.2;
+    }
+
+    #expand-logo {
+        display: none;
+    }
+
+    #page-title {
+        font-size: 30px;
+        margin-bottom: 6px;
+    }
+
+    header {
+        margin-left: -60px;
+    }
+
+    #global-section {
+        padding: 20px;
+        height: auto;
+    }
+
+    #contact-global-section {
+        flex-direction: column;
+    }
+
+    #first-section, #second-section {
+        width: 100%;
+        padding: 0;
+    }
+
+    #map-wrapper {
+        margin-top: 10px;
+        width: 100%;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+    #mymap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
